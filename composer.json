@@ -1,0 +1,11 @@
+{
+	"name": "shieldfy/DVPP",
+	"type": "library",
+	"description": "Simple testing of vulnerabilities",
+	"keywords": ["shieldfy", "vulnerabilities", "test"],
+	"autoload": {
+		"psr-4": {
+			"Shieldfy\\": "/src"
+		}
+	}
+}
