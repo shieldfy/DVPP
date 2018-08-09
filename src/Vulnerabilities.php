@@ -2,21 +2,13 @@
 
 namespace Shieldfy;
 
-class Vulnerabilities
+class DVPP
 {
-    public function init($app_key, $app_secret)
+    public function sqli()
     {
-        $shieldfy = \Shieldfy\Guard::init([
-            'app_key'       => $app_key,
-            'app_secret'    => $app_secret
-        ]);
-    
-        $pdo = new PDO('sqlite:' . __DIR__ . '/mydatabase.db');
-    
-        $db = $shieldfy->attachPDO($pdo);
-    
+        $db = new PDO('sqlite:' . __DIR__ . '/mydatabase.db');
         $results = $db->query("SELECT joke FROM `users` where username = '". $_GET['username'] ."'");
         $results = $results->fetchColumn();
-        echo json_encode($results);
+        return json_encode($results);
     }
 }

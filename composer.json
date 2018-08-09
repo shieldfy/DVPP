@@ -1,7 +1,7 @@
 {
 	"name": "shieldfy/DVPP",
 	"type": "library",
-	"description": "Simple testing of vulnerabilities",
+	"description": "Damn Vulnerable PHP Package",
 	"keywords": ["shieldfy", "vulnerabilities", "test"],
 	"autoload": {
 		"psr-4": {
